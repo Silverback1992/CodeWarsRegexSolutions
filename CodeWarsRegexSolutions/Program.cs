@@ -18,7 +18,9 @@ namespace CodeWarsRegexSolutions
             solution = SevenKyu.RemoveUrlAnchor("www.codewars.com#about");
             solution = SevenKyu.StringTask("Codewars");
             solution = SevenKyu.ValidatePin("1234\n");
-            
+            solution = SevenKyu.Gap(15);
+            solution = SevenKyu.RemoveNoise("%$&/#·@|º\\ª");
+
             #endregion 7kyu
 
             Console.ReadKey();

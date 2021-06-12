@@ -65,5 +65,37 @@ namespace CodeWarsRegexSolutions
             //return byte.TryParse(s, out var n) && s.Length == $"{n}".Length;
             //return Enumerable.Range(0, 256).Any(c => c.ToString().Equals(str));
         }
+
+        public static bool SixBitNumber(this string str)
+        {
+            return Regex.IsMatch(str, @"^(\d|[1-5]\d|6[0-3])\z");
+        }
+
+        public static bool Vowel(this string s)
+        {
+            return Regex.IsMatch(s.ToLowerInvariant(), @"^[aiueo]\z");
+            //public static bool Vowel(this string s) => Regex.IsMatch(s, @"^(?i)[aeiou]\z");
+        }
+
+        public static int Gap(int num)
+        {
+            var binary = Convert.ToString(num, 2);
+            return binary.Substring(0, binary.LastIndexOf('1') + 1).Split('1').Max(x => x.Length);
+
+            //return Convert.ToString(num, 2).TrimEnd('0').Split('1').Max(x => x.Length);
+
+            //var binary = Convert.ToString(num, 2);
+            //return binary.Trim('0').Split('1').Select(s => s.Length).Max();
+        }
+
+        public static int SumOfABeach(string s)
+        {
+            return Regex.Matches(s, "(?i)(sand|water|fish|sun)").Count;
+        }
+
+        public static string RemoveNoise(string equation)
+        {
+            return Regex.Replace(equation, @"[%$&\/#·@|º\\ª]", "");
+        }
     }
 }
