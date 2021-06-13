@@ -97,5 +97,68 @@ namespace CodeWarsRegexSolutions
         {
             return Regex.Replace(equation, @"[%$&\/#·@|º\\ª]", "");
         }
+
+        public static string Remove(string s)
+        {
+            return String.Join(" ", s.Split(' ').Select(x => $"{Regex.Match(x, "^!+").Value}{x.Replace("!", "")}"));
+        }
+
+        public static String IsItANum(string str)
+        {
+            string nums = Regex.Replace(str, @"\D*", "");
+            return nums.Length == 11 && nums[0] == '0' ? nums : "Not a phone number";
+
+            //var phone = Regex.Replace(str, @"\D", "");
+            //return Regex.IsMatch(phone, @"^0\d{10}$") ? phone : "Not a phone number";
+        }
+
+        public static bool IpValidator(string ip)
+        {
+            int value;
+            return ip.Split('.').Where(x => int.TryParse(x, out value) && (0 <= value) && (255 >= value) && !x.Contains(" ")).Count() == 4;
+        }
+
+        public static string CreateSequence(Regex regex)
+        {
+            return null;
+        }
+
+        public static string ShortForm(string str)
+        {
+            var m = Regex.Match(str, @"^(\w?)(.*)(\w$)");
+            return $"{m.Groups[1].Value}{Regex.Replace(m.Groups[2].Value, "(?i)[aiueo]", "")}{m.Groups[3].Value}";
+            //return Regex.Replace(str,@"(?!^)[aeiouAEIOU](?!$)","");
+        }
+
+        public static bool IsHex(string hex)
+        {
+            return Regex.IsMatch(hex, "^(?i)[a-f00-9]{3}$|^(?i)[a-f00-9]{6}$");
+            //return Regex.IsMatch(hex, @"^(?i)([a-f\d]{3}){1,2}$");
+        }
+
+        public static bool Double_check(string strng)
+        {
+            int nextIdx = 0;
+
+            return strng.ToLowerInvariant().Any(c =>
+            {
+                nextIdx++;
+                return strng.ElementAtOrDefault(nextIdx) == c;
+            });
+
+            //return Regex.IsMatch(s,@"(?i)(.)\1");
+        }
+
+        public static bool HexNumber(this string s)
+        {
+            return Regex.IsMatch(Regex.Replace(s, "^0x", ""), @"^(?i)[a-f0-9]+\z");
+            //return Regex.IsMatch(s, @"^(0x)?[A-Fa-f\d]+\z");
+        }
+
+        public static int? ToCents(this string price)
+        {
+            var m = Regex.Match(price, @"^\$(\d+)\.(\d{2})\z");
+            return m.Success ? Int32.Parse($"{m.Groups[1]}{m.Groups[2]}") : (int?)null;
+        }
     }
 }
