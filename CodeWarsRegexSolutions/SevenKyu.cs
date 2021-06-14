@@ -160,5 +160,15 @@ namespace CodeWarsRegexSolutions
             var m = Regex.Match(price, @"^\$(\d+)\.(\d{2})\z");
             return m.Success ? Int32.Parse($"{m.Groups[1]}{m.Groups[2]}") : (int?)null;
         }
+
+        public static bool IsValid(String idn)
+        {
+            return Regex.IsMatch(idn, @"^[a-z_\$][\w\$]*$");
+        }
+
+        public static string[][] search_names(string[][] logins)
+        {
+            return logins.Where(x => Regex.IsMatch(x[0], @".+_$")).ToArray();
+        }
     }
 }

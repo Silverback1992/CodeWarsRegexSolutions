@@ -29,8 +29,17 @@ namespace CodeWarsRegexSolutions
             solution = SevenKyu.ShortForm("insane");
             solution = SevenKyu.Double_check("a b  c");
             solution = SevenKyu.ToCents("$12345678.90");
+            string[][] a = { new[] { "foo", "foo@foo.com" }, new[] { "bar_", "bar@bar.com" } };
+            solution = SevenKyu.search_names(a);
+
 
             #endregion 7kyu
+
+            #region 6kyu
+
+
+
+            #endregion 6kyu
 
             #region 5kyu
 
