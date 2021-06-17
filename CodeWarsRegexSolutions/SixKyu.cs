@@ -36,5 +36,15 @@ namespace CodeWarsRegexSolutions
             return Regex.IsMatch(phoneNumber, @"^\(\d\d\d\) \d\d\d-\d\d\d\d$");
             //return Regex.IsMatch(phoneNumber, @"^\(\d{3}\) \d{3}-\d{4}\z");
         }
+
+        public static string ExtractFileName(string dirtFileName)
+        {
+            return Regex.Match(dirtFileName, @"^[0-9]+_(.+)\.").Groups[1].Value;
+        }
+
+        public static string validator(string password)
+        {
+            return Regex.IsMatch(password, @"^(?=.*\d)(?=.*[a-z])(?i)[\da-z]{4,19}$") ? "VALID" : "INVALID";
+        }
     }
 }
