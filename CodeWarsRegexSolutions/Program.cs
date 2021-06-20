@@ -37,7 +37,13 @@ namespace CodeWarsRegexSolutions
 
             #region 6kyu
 
-
+            solution = SixKyu.ToCamelCase("the_stealth_warrior");
+            solution = SixKyu.CleverSplit("Buy a !car [!red green !white] [cheap or !new]");
+            String[] robotTest = { "d[(0)(0)}b We're functioning automatik D[(0)(0)]b", "And we are d[(0)(0}]b dancing mechanik d[(0)(0)]b c[(0)(0)]b" };
+            solution = SixKyu.CountRobots(robotTest);
+            solution = SixKyu.Ermahgerd("my name is ohmygod girl and I love codewars!");
+            solution = SixKyu.DecipherThis("72olle 103doo 100ya");
+            solution = SixKyu.EncryptThis("A wise old owl lived in an oak");
 
             #endregion 6kyu
 

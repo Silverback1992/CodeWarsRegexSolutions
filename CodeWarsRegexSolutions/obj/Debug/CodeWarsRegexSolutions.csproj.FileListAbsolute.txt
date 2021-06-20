@@ -1,7 +1,7 @@
 C:\Users\alin2\source\repos\CodeWarsRegexSolutions\CodeWarsRegexSolutions\bin\Debug\CodeWarsRegexSolutions.exe.config
 C:\Users\alin2\source\repos\CodeWarsRegexSolutions\CodeWarsRegexSolutions\bin\Debug\CodeWarsRegexSolutions.exe
 C:\Users\alin2\source\repos\CodeWarsRegexSolutions\CodeWarsRegexSolutions\bin\Debug\CodeWarsRegexSolutions.pdb
-C:\Users\alin2\source\repos\CodeWarsRegexSolutions\CodeWarsRegexSolutions\obj\Debug\CodeWarsRegexSolutions.csprojAssemblyReference.cache
 C:\Users\alin2\source\repos\CodeWarsRegexSolutions\CodeWarsRegexSolutions\obj\Debug\CodeWarsRegexSolutions.csproj.CoreCompileInputs.cache
 C:\Users\alin2\source\repos\CodeWarsRegexSolutions\CodeWarsRegexSolutions\obj\Debug\CodeWarsRegexSolutions.exe
 C:\Users\alin2\source\repos\CodeWarsRegexSolutions\CodeWarsRegexSolutions\obj\Debug\CodeWarsRegexSolutions.pdb
+C:\Users\alin2\source\repos\CodeWarsRegexSolutions\CodeWarsRegexSolutions\obj\Debug\CodeWarsRegexSolutions.csproj.AssemblyReference.cache
